@@ -9,7 +9,7 @@ class ArticleModel extends Model
     protected $table         = 'articles';
     protected $primaryKey    = 'id';
     protected $returnType    = 'array';
-    protected $allowedFields = ['title', 'content', 'is_notice', 'view_count'];
+    protected $allowedFields = ['title', 'content', 'is_notice', 'images', 'attachments', 'view_count'];
     protected $useTimestamps = true;
     protected $useSoftDeletes = true;
 

@@ -102,7 +102,37 @@
         </p>
       </header>
 
+      <?php
+        $images = $article['images'] ? json_decode($article['images'], true) : [];
+        if (! empty($images)):
+      ?>
+        <div class="post__images" style="margin: 24px 0;">
+          <?php foreach ($images as $img): ?>
+            <img src="<?= base_url(esc($img['path'])) ?>" alt="<?= esc($img['name']) ?>" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 12px;">
+          <?php endforeach ?>
+        </div>
+      <?php endif ?>
+
       <div class="post__body"><?= nl2br(esc($article['content'])) ?></div>
+
+      <?php
+        $attachments = $article['attachments'] ? json_decode($article['attachments'], true) : [];
+        if (! empty($attachments)):
+      ?>
+        <div class="post__attachments" style="margin-top: 32px; padding-top: 24px; border-top: 1px solid #eee;">
+          <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 12px;">📎 첨부파일</h3>
+          <ul style="list-style: none; padding: 0;">
+            <?php foreach ($attachments as $att): ?>
+              <li style="margin-bottom: 8px;">
+                <a href="<?= base_url(esc($att['path'])) ?>" download style="color: #0066cc; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                  📄 <?= esc($att['name']) ?>
+                  <span style="color: #999; font-size: 12px;">(<?= number_format($att['size'] / 1024, 1) ?> KB)</span>
+                </a>
+              </li>
+            <?php endforeach ?>
+          </ul>
+        </div>
+      <?php endif ?>
 
       <nav class="post__nav" aria-label="다른 글">
         <?php if ($prev !== null): ?>
