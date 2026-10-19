@@ -2,7 +2,6 @@
 $is_edit = $article !== null;
 $action  = $is_edit ? base_url('admin/article/update/' . $article['id']) : base_url('admin/article/store');
 $errors  = session('errors') ?? [];
-$images  = $is_edit && $article['images'] ? json_decode($article['images'], true) : [];
 $attachments = $is_edit && $article['attachments'] ? json_decode($article['attachments'], true) : [];
 ?>
 <?= $this->extend('admin/layout') ?>
@@ -12,6 +11,8 @@ $attachments = $is_edit && $article['attachments'] ? json_decode($article['attac
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ckeditor5@42.0.2/build/ckeditor.min.css">
 
 <form class="form" method="post" action="<?= $action ?>" enctype="multipart/form-data">
   <?= csrf_field() ?>
@@ -28,34 +29,12 @@ $attachments = $is_edit && $article['attachments'] ? json_decode($article['attac
 
   <div class="field">
     <label for="content">내용 <span class="req" aria-hidden="true">*</span></label>
+    <p class="help" style="margin-bottom: 12px;">✏️ 텍스트와 이미지를 자유롭게 배치할 수 있습니다. 에디터의 이미지 아이콘을 클릭해 이미지를 삽입하세요.</p>
     <textarea class="txt" id="content" name="content" required
               <?= isset($errors['content']) ? 'aria-invalid="true" aria-describedby="content-err"' : '' ?>
     ><?= esc(old('content', $is_edit ? $article['content'] : '')) ?></textarea>
-    <p class="help">줄을 바꾼 그대로 홈페이지에 표시됩니다.</p>
     <?php if (isset($errors['content'])): ?>
       <p class="err" id="content-err" role="alert"><?= esc($errors['content']) ?></p>
-    <?php endif ?>
-  </div>
-
-  <div class="field">
-    <label for="images">🖼️ 이미지 (여러 개 업로드 가능)</label>
-    <input class="inp" type="file" id="images" name="images[]" multiple accept="image/jpeg,image/png,image/gif,image/webp">
-    <p class="help">JPG, PNG, GIF, WebP 형식. 최대 5MB 각각. 여러 개를 동시에 선택할 수 있습니다.</p>
-
-    <?php if (! empty($images)): ?>
-      <div style="margin-top: 16px;">
-        <p style="margin-bottom: 8px; font-size: 12px; color: #666; font-weight: 500;">현재 등록된 이미지 (<?= count($images) ?>개):</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-          <?php foreach ($images as $img): ?>
-            <div style="position: relative; display: inline-block;">
-              <img src="<?= base_url(esc($img['path'])) ?>" alt="<?= esc($img['name']) ?>"
-                   style="max-width: 120px; max-height: 120px; border-radius: 4px; object-fit: cover;">
-              <small style="display: block; margin-top: 4px; font-size: 11px; color: #999;"><?= esc($img['name']) ?></small>
-            </div>
-          <?php endforeach ?>
-        </div>
-        <p style="margin-top: 12px; font-size: 12px; color: #ff9800;">💡 새 이미지를 업로드하면 기존 이미지는 유지되고, 새 이미지가 추가됩니다.</p>
-      </div>
     <?php endif ?>
   </div>
 
@@ -108,5 +87,21 @@ $attachments = $is_edit && $article['attachments'] ? json_decode($article['attac
     <button type="submit" class="btn btn--danger">이 글 삭제</button>
   </form>
 <?php endif ?>
+
+<script src="https://cdn.jsdelivr.net/npm/ckeditor5@42.0.2/build/ckeditor.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ckeditor5@42.0.2/build/translations/ko.min.js"></script>
+<script>
+ClassicEditor
+  .create(document.querySelector('#content'), {
+    language: 'ko',
+    toolbar: ['heading', '|', 'bold', 'italic', 'link', 'imageInsert', 'blockQuote', 'bulletedList', 'numberedList', 'undo', 'redo'],
+    image: {
+      toolbar: ['imageTextAlternative', 'imageStyle:full', 'imageStyle:side']
+    }
+  })
+  .catch(err => {
+    console.error('CKEditor 로드 실패:', err);
+  });
+</script>
 
 <?= $this->endSection() ?>

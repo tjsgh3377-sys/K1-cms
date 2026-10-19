@@ -9,17 +9,21 @@ class GalleryModel extends Model
     protected $table          = 'galleries';
     protected $primaryKey     = 'id';
     protected $returnType     = 'array';
-    protected $allowedFields  = ['title', 'image_path', 'thumb_path', 'sort_order'];
+    protected $allowedFields  = ['title', 'category', 'description', 'image_path', 'thumb_path', 'sort_order'];
     protected $useTimestamps  = true;
     protected $useSoftDeletes = true;
 
     protected $validationRules = [
         'title' => 'required|max_length[200]',
+        'category' => 'in_list[card,leaflet,logo,sticker]',
     ];
     protected $validationMessages = [
         'title' => [
-            'required'   => '사진 설명을 입력해 주세요.',
-            'max_length' => '사진 설명은 200자까지 입력할 수 있습니다.',
+            'required'   => '포트폴리오 제목을 입력해 주세요.',
+            'max_length' => '제목은 200자까지 입력할 수 있습니다.',
+        ],
+        'category' => [
+            'in_list' => '올바른 카테고리를 선택해 주세요.',
         ],
     ];
 

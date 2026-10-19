@@ -90,13 +90,6 @@ class Article extends AdminController
         $article = $model->find($id);
 
         if ($article) {
-            // 이미지 파일 삭제
-            if ($article['images']) {
-                $images = json_decode($article['images'], true) ?? [];
-                foreach ($images as $img) {
-                    $this->deleteFile($img['path']);
-                }
-            }
             // 첨부파일 삭제
             if ($article['attachments']) {
                 $attachments = json_decode($article['attachments'], true) ?? [];
@@ -121,50 +114,11 @@ class Article extends AdminController
     }
 
     /**
-     * 이미지와 첨부파일 업로드 처리
+     * 첨부파일 업로드 처리 (이미지는 CKEditor에서 관리)
      */
     private function handleFiles(array &$data, ?int $article_id = null): bool
     {
-        $data['images'] = null;
         $data['attachments'] = null;
-
-        // 이미지 업로드 처리
-        $images = $this->request->getFiles('images');
-        if ($images) {
-            $uploadedImages = [];
-            foreach ($images as $file) {
-                if (! $file->isValid()) {
-                    continue;
-                }
-
-                $ext = strtolower($file->getClientExtension());
-                if (! in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp'])) {
-                    return redirect()->back()->withInput()
-                        ->with('error', 'JPG, PNG, GIF, WebP 이미지만 업로드 가능합니다.')->send();
-                }
-
-                if ($file->getSize() > 5242880) {
-                    return redirect()->back()->withInput()
-                        ->with('error', '이미지 파일은 5MB 이하여야 합니다.')->send();
-                }
-
-                $newName = $file->getRandomName();
-                $uploadDir = FCPATH . 'uploads/articles/images/';
-                if (! is_dir($uploadDir)) {
-                    mkdir($uploadDir, 0755, true);
-                }
-
-                $file->move($uploadDir, $newName);
-                $uploadedImages[] = [
-                    'path' => 'uploads/articles/images/' . $newName,
-                    'name' => $file->getClientName(),
-                ];
-            }
-
-            if (! empty($uploadedImages)) {
-                $data['images'] = json_encode($uploadedImages, JSON_UNESCAPED_UNICODE);
-            }
-        }
 
         // 첨부파일 업로드 처리
         $attachments = $this->request->getFiles('attachments');
@@ -206,16 +160,9 @@ class Article extends AdminController
             }
         }
 
-        // 기존 파일 삭제 (수정 시, 새로 업로드 안 한 경우 유지)
+        // 기존 첨부파일 유지 (수정 시, 새로 업로드 안 한 경우)
         if ($article_id) {
             $oldArticle = (new ArticleModel())->find($article_id);
-
-            // 새 이미지를 업로드하지 않으면 기존 이미지 유지
-            if ($data['images'] === null && $oldArticle['images']) {
-                $data['images'] = $oldArticle['images'];
-            }
-
-            // 새 첨부파일을 업로드하지 않으면 기존 첨부파일 유지
             if ($data['attachments'] === null && $oldArticle['attachments']) {
                 $data['attachments'] = $oldArticle['attachments'];
             }

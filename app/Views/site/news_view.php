@@ -102,18 +102,7 @@
         </p>
       </header>
 
-      <?php
-        $images = $article['images'] ? json_decode($article['images'], true) : [];
-        if (! empty($images)):
-      ?>
-        <div class="post__images" style="margin: 24px 0;">
-          <?php foreach ($images as $img): ?>
-            <img src="<?= base_url(esc($img['path'])) ?>" alt="<?= esc($img['name']) ?>" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 12px;">
-          <?php endforeach ?>
-        </div>
-      <?php endif ?>
-
-      <div class="post__body"><?= nl2br(esc($article['content'])) ?></div>
+      <div class="post__body" style="word-break: break-word;"><?= $article['content'] ?></div>
 
       <?php
         $attachments = $article['attachments'] ? json_decode($article['attachments'], true) : [];

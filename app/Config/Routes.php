@@ -30,6 +30,7 @@ $routes->get('recruit/view/(:num)', 'Recruit::view/$1');
 // ---------------------------------------------------------------------
 $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function ($routes) {
     $routes->post('contact', 'Contact::submit');
+    $routes->post('inquiry/submit', 'Inquiry::submit');
 });
 
 // ---------------------------------------------------------------------

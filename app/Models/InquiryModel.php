@@ -9,23 +9,25 @@ class InquiryModel extends Model
     protected $table          = 'inquiries';
     protected $primaryKey     = 'id';
     protected $returnType     = 'array';
-    protected $allowedFields  = ['purpose', 'company', 'name', 'phone', 'email', 'message', 'is_read'];
+    protected $allowedFields  = ['service', 'name', 'email', 'phone', 'company', 'message', 'status', 'ip_address', 'is_read'];
     protected $useTimestamps  = true;
     protected $useSoftDeletes = true;
 
     protected $validationRules = [
-        'purpose' => 'required|max_length[50]',
-        'name'    => 'required|max_length[50]',
+        'service' => 'required|in_list[card,leaflet,logo,sticker,other]',
+        'name'    => 'required|max_length[100]',
         'email'   => 'required|valid_email|max_length[100]',
+        'phone'   => 'required|max_length[20]',
         'message' => 'required',
     ];
     protected $validationMessages = [
-        'purpose' => ['required' => '문의 목적을 선택해 주세요.'],
+        'service' => ['required' => '서비스를 선택해 주세요.'],
         'name'    => ['required' => '이름을 입력해 주세요.'],
         'email'   => [
             'required'    => '이메일을 입력해 주세요.',
             'valid_email' => '이메일 주소를 다시 확인해 주세요.',
         ],
+        'phone'   => ['required' => '연락처를 입력해 주세요.'],
         'message' => ['required' => '문의 내용을 입력해 주세요.'],
     ];
 

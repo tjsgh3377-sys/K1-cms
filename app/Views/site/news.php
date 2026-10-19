@@ -121,9 +121,23 @@
       <?php $seq = $article_total - ($current_page - 1) * $per_page; ?>
       <?php foreach ($article_list as $row): ?>
       <?php $seq--; ?>
-      <a class="board__row" href="<?= base_url('news/view/' . $row['id']) ?>"><span class="no"><?= $row['is_notice'] ? '공지' : esc($seq + 1) ?></span>
-        <span class="ti"><?= esc($row['title']) ?><svg viewBox="0 0 40 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M0 6h37M32 1l6 5-6 5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <span class="dt"><?= esc(date('Y.m.d', strtotime($row['created_at']))) ?></span></a>
+      <?php
+        $images = $row['images'] ? json_decode($row['images'], true) : [];
+        $thumbnail = !empty($images) ? $images[0]['path'] : null;
+      ?>
+      <a class="board__row" href="<?= base_url('news/view/' . $row['id']) ?>" style="display: flex; gap: 16px; align-items: flex-start;">
+        <?php if ($thumbnail): ?>
+          <div style="flex: 0 0 120px; overflow: hidden; border-radius: 6px; background: #f0f0f0;">
+            <img src="<?= base_url(esc($thumbnail)) ?>" alt="<?= esc($row['title']) ?>"
+                 style="width: 100%; height: 120px; object-fit: cover; display: block;">
+          </div>
+        <?php endif ?>
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between; min-height: 120px;">
+          <span class="no" style="margin-bottom: 8px;"><?= $row['is_notice'] ? '공지' : esc($seq + 1) ?></span>
+          <span class="ti" style="flex: 1; display: flex; align-items: center;"><?= esc($row['title']) ?><svg viewBox="0 0 40 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" style="margin-left: 8px;"><path d="M0 6h37M32 1l6 5-6 5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="dt"><?= esc(date('Y.m.d', strtotime($row['created_at']))) ?></span>
+        </div>
+      </a>
       <?php endforeach ?>
       <?php endif ?>
       <?php if ($pager->getPageCount() > 1): ?>

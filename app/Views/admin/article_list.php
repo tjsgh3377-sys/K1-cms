@@ -55,12 +55,8 @@
             <td>
               <?php if ($row['is_notice']): ?><span class="badge badge--notice">공지</span> <?php endif ?>
               <?php
-                $images = $row['images'] ? json_decode($row['images'], true) : [];
                 $attachments = $row['attachments'] ? json_decode($row['attachments'], true) : [];
-                if (! empty($images)): ?>
-                <span class="badge" title="이미지 <?= count($images) ?>개">🖼 <?= count($images) ?></span>
-              <?php endif ?>
-              <?php if (! empty($attachments)): ?>
+                if (! empty($attachments)): ?>
                 <span class="badge" title="첨부파일 <?= count($attachments) ?>개">📎 <?= count($attachments) ?></span>
               <?php endif ?>
               <a class="ttl" href="<?= base_url('admin/article/edit/' . $row['id']) ?>"><?= esc($row['title']) ?></a>

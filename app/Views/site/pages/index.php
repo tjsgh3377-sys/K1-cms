@@ -3,65 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>(주)케이원 · K1 OCEAN — 통합 시운전 전문 기업</title>
-<meta name="description" content="조선·해양·에너지 산업의 Commissioning 전 과정을 하나의 책임체계로 수행하는 Turnkey 전문기업, (주)케이원.">
-<link rel="canonical" href="https://k1tnc.co.kr/">
-<link rel="alternate" hreflang="ko" href="https://k1tnc.co.kr/">
-<link rel="alternate" hreflang="en" href="https://k1tnc.co.kr/en/">
-<link rel="alternate" hreflang="x-default" href="https://k1tnc.co.kr/">
+<title>(주)케이원 · 명함, 리플렛, 로고 제작 전문</title>
+<meta name="description" content="명함·리플렛·로고·스티커 제작 전문 회사. 브랜드를 세상에 알리는 디자인, 케이원이 합니다.">
+<link rel="canonical" href="https://kaiwan.co.kr/">
+<link rel="alternate" hreflang="ko" href="https://kaiwan.co.kr/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="(주)케이원 · K1 OCEAN">
+<meta property="og:site_name" content="(주)케이원 · 디자인 인쇄 전문">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="(주)케이원 · K1 OCEAN — 통합 시운전 전문 기업">
-<meta property="og:description" content="조선·해양·에너지 산업의 Commissioning 전 과정을 하나의 책임체계로 수행하는 Turnkey 전문기업, (주)케이원.">
-<meta property="og:url" content="https://k1tnc.co.kr/">
-<meta property="og:image" content="https://k1tnc.co.kr/assets/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="(주)케이원 · K1 OCEAN — 통합 시운전 전문 기업">
-<meta name="twitter:description" content="조선·해양·에너지 산업의 Commissioning 전 과정을 하나의 책임체계로 수행하는 Turnkey 전문기업, (주)케이원.">
-<meta name="twitter:image" content="https://k1tnc.co.kr/assets/og-image.jpg">
+<meta property="og:title" content="(주)케이원 · 디자인 인쇄 전문">
+<meta property="og:description" content="명함·리플렛·로고·스티커 제작 전문 회사">
+<meta property="og:image" content="https://kaiwan.co.kr/assets/og-image.jpg">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="css/v2.css?v=20260902">
+<link rel="stylesheet" href="css/home.css?v=20261018">
 </head>
 <body>
 <a class="skip" href="#top">본문 바로가기</a>
 
-<!-- ============ HEADER (adaptive dark/light) ============ -->
-<header class="head" id="head">
-  <div class="head__in">
-    <a class="brand" href="#top" aria-label="(주)케이원 홈">
-      <img class="brand--dark" src="assets/logo-k1-dark.png" alt="(주)케이원 · Korea No.1">
-      <img class="brand--light" src="assets/logo-k1.png" alt="(주)케이원 · Korea No.1">
+<!-- ============ HEADER (고정) ============ -->
+<header class="header is-sticky" id="header">
+  <div class="header__container">
+    <a class="logo" href="#" aria-label="케이원 홈">
+      <span class="logo__text">K1</span>
     </a>
-    <div class="gnbwrap">
-      <nav aria-label="주 메뉴"><ul class="gnb">
-        <li><a href="about.html">회사소개</a></li>
-        <li><a href="business.html">사업분야</a></li>
-        <li><a href="projects.html">프로젝트 실적</a></li>
-        <li><a href="recruit.html">인재채용</a></li>
-        <li><a href="news.html">홍보센터</a></li>
-        <li><a href="contact.html">고객문의</a></li>
-      </ul></nav>
-      <div class="mega"><div class="mega__in">
-        <div class="mega__col"><h5>회사소개</h5><a href="about.html#ceo">CEO 인사말</a><a href="about.html#overview">회사개요</a><a href="about.html#org">조직도</a></div>
-        <div class="mega__col"><h5>사업분야</h5><a href="business.html#commissioning">시운전</a><a href="business.html#support">기술지원</a><a href="business.html#maintenance">유지보수</a></div>
-        <div class="mega__col"><h5>프로젝트 실적</h5><a href="projects.html#domestic">국내 프로젝트</a><a href="projects.html#overseas">해외 프로젝트</a><a href="projects.html#clients">주요 고객사</a></div>
-        <div class="mega__col"><h5>인재채용</h5><a href="recruit.html">채용안내</a><a href="recruit.html#jobs">채용공고</a></div>
-        <div class="mega__col"><h5>홍보센터</h5><a href="news.html">게시판</a><a href="news.html#gallery">갤러리</a><a href="news.html#ci">CI</a></div>
-        <div class="mega__col"><h5>고객문의</h5><a href="contact.html#inquiry">문의하기</a><a href="contact.html#map">오시는 길</a></div>
-      </div></div>
-    </div>
-    <div class="head__r">
-      <div class="lang" role="group" aria-label="Language"><a class="lang__b is-on" href="#" aria-current="true">KR</a><a class="lang__b" href="en/index.html">EN</a></div>
-      <a class="head__cta" href="contact.html">고객문의</a>
-      <button class="burger" id="burger" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
+    <nav class="nav" aria-label="주 네비게이션">
+      <ul class="nav__list">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#works" class="nav__link">Works</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<!-- ============ 모바일 메뉴 ============ -->
+<div class="nav__drawer" id="navDrawer" aria-hidden="true">
+  <nav aria-label="모바일 네비게이션">
+    <a href="#about" class="nav__drawer-link">About</a>
+    <a href="#works" class="nav__drawer-link">Works</a>
+    <a href="#contact" class="nav__drawer-link">Contact</a>
+  </nav>
+</div>
+
+<!-- ============ 플로팅 액션 버튼 ============ -->
+<div class="floating-actions">
+  <a href="tel:0501234567" class="fab fab--phone" title="전화">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.92 7.02C17.45 6.18 16.84 5.46 16.13 4.9M19.07 11.08c1.18-2.01 1.85-4.4 1.85-6.95 0-1.8-.22-3.53-.64-5.2H5c-3.87 0-7 3.13-7 7s3.13 7 7 7h1v2c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2h6v2c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2h1c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.68-4.99z"/></svg>
+  </a>
+  <a href="https://pf.kakao.com/" class="fab fab--kakao" title="카카오톡">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.58 2 10c0 2.54 1.19 4.85 3.15 6.37.21.3.32.65.27 1.01L5 20.5c-.1.76.61 1.42 1.34 1.08l3.76-2.12c.24-.13.52-.16.79-.08 1.19.3 2.45.46 3.76.46 5.52 0 10-3.58 10-8 0-4.42-4.48-8-10-8z"/></svg>
+  </a>
+  <a href="#contact" class="fab fab--chat" title="문의하기">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+  </a>
+</div>
 
 <!-- ============ MOBILE DRAWER ============ -->
 <div class="drawer" id="drawer" aria-hidden="true">
@@ -78,59 +77,209 @@
 
 <main id="top">
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="hero" data-nav="dark">
-  <div class="hero__media"><img src="assets/hero.jpg" alt="석양의 해양 현장에서 작업 중인 대형 선박과 데크 크레인" fetchpriority="high"></div>
-  <div class="hero__veil"></div>
-  <div class="scrollcue">SCROLL</div>
-
-  <div class="hero__top">
-    <div class="wrap">
-      <span class="hero__eyebrow">FROM PLANNING TO COMPLETION</span>
-      <h1>
-        <span class="mask"><span>프로젝트의 마지막 순간,</span></span>
-        <span class="mask"><span><i>K1</i>이 완성합니다</span></span>
-      </h1>
-      <p class="hero__sub">조선 · 해양 · 에너지 산업의 Commissioning 전 과정을<br>하나의 책임체계로 수행하는 전문기업, <span class="nb">(주)케이원.</span></p>
-      <div class="hero__act">
-        <a class="btn btn--solid" href="business.html"><span>사업분야 보기</span>
-          <svg viewBox="0 0 40 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M0 6h37M32 1l6 5-6 5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-    </div>
+<!-- ============ HERO 섹션 ============ -->
+<section class="hero" id="hero">
+  <div class="hero__content">
+    <h1 class="hero__title">
+      우리는 브랜드를 세상에 알리는<br><em>디자인 회사입니다</em>
+    </h1>
+    <p class="hero__subtitle">명함, 리플렛, 로고, 스티커 제작<br>당신의 브랜드를 돋보이게 하는 전문 파트너</p>
+    <a href="#contact" class="cta-button">지금 상담받기</a>
   </div>
+  <div class="hero__bg"></div>
+</section>
 
-  <!-- brand architecture: ONE COMPANY · TWO DOMAINS -->
-  <div class="dom">
-    <div class="dom__lab">One Company · Two Domains</div>
-    <div class="dom__in">
-      <div class="dom__b" data-k="k1">
-        <div class="dom__mk"><i class="dot" aria-hidden="true"></i><b>K1</b><span>Offshore · Plant</span></div>
-        <ul class="dom__f"><li>해양플랜트</li><li>FPSO</li><li>육상플랜트</li></ul>
-        <div class="dom__en"><b>Integrated Commissioning</b><span>Project Coordination · Technical Expertise</span></div>
-      </div>
-      <div class="dom__b" data-k="ocean">
-        <div class="dom__mk"><i class="dot" aria-hidden="true"></i><b>K1 OCEAN</b><span>Marine</span></div>
-        <ul class="dom__f"><li>Commercial Vessel</li><li>Special Vessel</li><li>LNG Carrier</li></ul>
-        <div class="dom__en"><b>E&amp;I&amp;M Commissioning</b></div>
-      </div>
+<!-- ============ ABOUT 섹션 ============ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">/ About Us</span>
+      <h2 class="section-title">케이원은<br>디자인으로 신뢰를 만듭니다</h2>
+    </div>
+    <div class="about__content">
+      <p class="about__text">
+        케이원은 단순히 디자인을 만드는 것이 아닙니다.<br>
+        당신의 비즈니스를 이해하고, 브랜드의 가치를 담아<br>
+        고객에게 어떻게 전달할지 함께 고민합니다.
+      </p>
+      <p class="about__text">
+        작은 스타트업부터 대기업까지,<br>
+        모두가 신뢰할 수 있는 디자인 파트너로 함께하겠습니다.
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ============ FIGURES (company scale) ============ -->
-<section class="figs" data-nav="dark">
-  <div class="wrap">
-    <div class="figs__in rv">
-      <div class="fig"><div class="fig__n"><span data-count="20">20</span><em>년</em></div><div class="fig__l">핵심 기술진 현장 경험</div></div>
-      <div class="fig"><div class="fig__n"><span data-count="9">9</span><em>년</em></div><div class="fig__l">창립 · Since 2017</div></div>
-      <div class="fig"><div class="fig__n"><span data-count="180">180</span><em>억</em></div><div class="fig__l">2025년 매출</div></div>
-      <div class="fig"><div class="fig__n"><span data-count="260">260</span><em>명</em></div><div class="fig__l">전문 인력</div></div>
+<!-- ============ 4대 사업 기둥 ============ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">/ Services</span>
+      <h2 class="section-title">주요 사업 분야</h2>
+    </div>
+    <div class="services__grid">
+      <!-- 명함 제작 -->
+      <article class="service-card service-card--01">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 60 60" fill="none"><rect x="8" y="15" width="44" height="30" rx="2" stroke="currentColor" stroke-width="2"/><line x1="30" y1="15" x2="30" y2="45" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3 class="service-card__title">명함 제작</h3>
+        <p class="service-card__desc">당신의 첫인상을 결정하는 명함<br>고급스러운 디자인과 품질로<br>전문가다운 이미지를 전달합니다</p>
+        <ul class="service-card__features">
+          <li>용지 선택 (코팅/무광/특수지)</li>
+          <li>고급 인쇄 기술</li>
+          <li>맞춤 사이즈 제작</li>
+        </ul>
+      </article>
+
+      <!-- 리플렛 제작 -->
+      <article class="service-card service-card--02">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 60 60" fill="none"><path d="M8 20h28v24H8z" stroke="currentColor" stroke-width="2"/><path d="M36 20h16v24H36z" stroke="currentColor" stroke-width="2"/><path d="M36 20L24 32" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3 class="service-card__title">리플렛 제작</h3>
+        <p class="service-card__desc">효과적인 정보 전달의 핵심<br>매력적인 구성과 명확한 메시지로<br>고객을 사로잡는 리플렛을 제작합니다</p>
+        <ul class="service-card__features">
+          <li>3단/4단 접이 디자인</li>
+          <li>고급 이미지 인쇄</li>
+          <li>다양한 용지 선택</li>
+        </ul>
+      </article>
+
+      <!-- 로고 제작 -->
+      <article class="service-card service-card--03">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="18" stroke="currentColor" stroke-width="2"/><path d="M18 30a12 12 0 0 1 12-12m0 24a12 12 0 0 1-12-12" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </div>
+        <h3 class="service-card__title">로고 제작</h3>
+        <p class="service-card__desc">당신의 브랜드 정체성을 담은 로고<br>창의적인 디자인 컨설팅으로<br>기억되는 브랜드를 만듭니다</p>
+        <ul class="service-card__features">
+          <li>브랜드 전략 컨설팅</li>
+          <li>다양한 안 제시</li>
+          <li>CI 가이드라인 제공</li>
+        </ul>
+      </article>
+
+      <!-- 스티커 제작 -->
+      <article class="service-card service-card--04">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 60 60" fill="none"><path d="M12 18c0-2 2-4 4-4h28c2 0 4 2 4 4v20c0 2-2 4-4 4H16c-2 0-4-2-4-4z" stroke="currentColor" stroke-width="2"/><path d="M16 22h28M16 28h28M16 34h20" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3 class="service-card__title">스티커 제작</h3>
+        <p class="service-card__desc">브랜드를 널리 알리는 스티커<br>다양한 재료와 마감으로<br>내구성 있는 스티커를 제작합니다</p>
+        <ul class="service-card__features">
+          <li>일반/홀로그램 스티커</li>
+          <li>방수 및 내구성</li>
+          <li>다양한 사이즈</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 포트폴리오 ============ -->
+<section class="portfolio" id="works">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">/ Works</span>
+      <h2 class="section-title">포트폴리오</h2>
+    </div>
+
+    <!-- 필터 버튼 -->
+    <div class="portfolio__filters">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="card">명함</button>
+      <button class="filter-btn" data-filter="leaflet">리플렛</button>
+      <button class="filter-btn" data-filter="logo">로고</button>
+      <button class="filter-btn" data-filter="sticker">스티커</button>
+    </div>
+
+    <!-- 포트폴리오 그리드 -->
+    <div class="portfolio__grid">
+      <article class="portfolio-item" data-category="card">
+        <div class="portfolio-item__image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+        <h3>브런치 카페 명함</h3>
+        <p>카페 브랜드의 따뜻한 감성을 담은 명함</p>
+      </article>
+      <article class="portfolio-item" data-category="leaflet">
+        <div class="portfolio-item__image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+        <h3>뷰티 샵 리플렛</h3>
+        <p>고급스러운 비주얼로 표현한 뷰티 서비스 안내</p>
+      </article>
+      <article class="portfolio-item" data-category="logo">
+        <div class="portfolio-item__image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+        <h3>테크 스타트업 로고</h3>
+        <p>혁신과 미래를 상징하는 로고 디자인</p>
+      </article>
+      <article class="portfolio-item" data-category="sticker">
+        <div class="portfolio-item__image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+        <h3>캐릭터 스티커</h3>
+        <p>브랜드 캐릭터를 활용한 스티커 세트</p>
+      </article>
+      <article class="portfolio-item" data-category="card">
+        <div class="portfolio-item__image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+        <h3>IT 회사 명함</h3>
+        <p>미니멀한 디자인으로 전문성 표현</p>
+      </article>
+      <article class="portfolio-item" data-category="leaflet">
+        <div class="portfolio-item__image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+        <h3>부동산 회사 리플렛</h3>
+        <p>신뢰성 있는 컬러로 브랜드 이미지 강화</p>
+      </article>
+    </div>
+
+    <div class="portfolio__more">
+      <a href="/projects" class="btn">전체 포트폴리오 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 클라이언트 ============ -->
+<section class="clients">
+  <div class="container">
+    <h2 class="section-header__title">함께한 고객사</h2>
+    <div class="clients__grid">
+      <div class="client-logo">STARTUP A</div>
+      <div class="client-logo">CAFE CO.</div>
+      <div class="client-logo">TECH INC.</div>
+      <div class="client-logo">BEAUTY LAB</div>
+      <div class="client-logo">RETAIL CO.</div>
+      <div class="client-logo">AGENCY+</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 뉴스 섹션 ============ -->
+<section class="news">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">최근 소식</h2>
+    </div>
+    <div class="news__grid">
+      <article class="news-card">
+        <div class="news-card__meta">2026.10.18</div>
+        <h3 class="news-card__title">새로운 리플렛 사료 공개</h3>
+        <p class="news-card__excerpt">케이원의 최신 리플렛 디자인 트렌드와 기술을 소개합니다.</p>
+        <a href="#" class="news-card__link">자세히 보기</a>
+      </article>
+      <article class="news-card">
+        <div class="news-card__meta">2026.10.10</div>
+        <h3 class="news-card__title">로고 디자인 팁 - 기억되는 브랜드 만들기</h3>
+        <p class="news-card__excerpt">성공적인 로고 디자인의 요소와 사례를 배워봅시다.</p>
+        <a href="#" class="news-card__link">자세히 보기</a>
+      </article>
+      <article class="news-card">
+        <div class="news-card__meta">2026.09.28</div>
+        <h3 class="news-card__title">명함 인쇄 품질 업그레이드 소식</h3>
+        <p class="news-card__excerpt">더욱 정밀하고 선명한 명함 인쇄가 가능해졌습니다.</p>
+        <a href="#" class="news-card__link">자세히 보기</a>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- ============ ABOUT (image-first) ============ -->
-<section class="sec sec--paper about" id="about" data-nav="light">
+<section class="sec sec--paper about" id="about-detail" data-nav="light">
   <div class="wrap">
     <div class="about__grid">
       <div class="about__img viz rv" style="--gx:70%;--gy:30%">
@@ -160,6 +309,7 @@
   </div>
 </section>
 
+<!-- 이하 기존 섹션은 제거됨 -->
 <!-- ============ BRANDS (K1 · K1 OCEAN) ============ -->
 <section class="sec sec--paper2 brands" id="brands" data-nav="light">
   <div class="wrap">
@@ -524,38 +674,108 @@
 
 </main>
 
-<!-- ============ FOOTER ============ -->
-<footer class="foot" id="contact" data-nav="dark">
-  <div class="foot__cta">
-    <div class="wrap">
-      <h2>프로젝트의 마지막 순간,<br><em>케이원이 함께하겠습니다</em></h2>
-      <a class="btn btn--solid" href="contact.html"><span>고객문의</span>
-        <svg viewBox="0 0 40 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M0 6h37M32 1l6 5-6 5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<!-- ============ 문의 섹션 ============ -->
+<section class="inquiry" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">/ Contact</span>
+      <h2 class="section-title">지금 바로<br>상담받으세요</h2>
     </div>
-  </div>
-  <div class="wrap foot__top">
-    <div class="foot__brand">
-      <div class="foot__logo">
-        <img src="assets/logo-k1-dark.png" alt="(주)케이원 · Korea No.1">
+
+    <div class="inquiry__form-wrapper">
+      <form class="inquiry__form" id="inquiryForm" method="post" action="/api/inquiry/submit">
+        <!-- 1단계: 서비스 선택 -->
+        <fieldset class="form-step">
+          <legend>어떤 서비스가 필요하신가요?</legend>
+          <div class="form-group">
+            <label><input type="radio" name="service" value="card"> 명함 제작</label>
+            <label><input type="radio" name="service" value="leaflet"> 리플렛 제작</label>
+            <label><input type="radio" name="service" value="logo"> 로고 제작</label>
+            <label><input type="radio" name="service" value="sticker"> 스티커 제작</label>
+            <label><input type="radio" name="service" value="other"> 기타 상담</label>
+          </div>
+        </fieldset>
+
+        <!-- 2단계: 담당자 정보 -->
+        <fieldset class="form-step">
+          <legend>담당자 정보를 입력하세요</legend>
+          <div class="form-group">
+            <input type="text" name="name" placeholder="성명 *" required>
+            <input type="email" name="email" placeholder="이메일 *" required>
+            <input type="tel" name="phone" placeholder="연락처 *" required>
+            <input type="text" name="company" placeholder="회사명">
+          </div>
+        </fieldset>
+
+        <!-- 3단계: 상세 내용 -->
+        <fieldset class="form-step">
+          <legend>프로젝트에 대해 알려주세요</legend>
+          <div class="form-group">
+            <textarea name="message" placeholder="프로젝트 내용, 일정, 특별한 요청사항 등을 작성해주세요 *" rows="6" required></textarea>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="cta-button">상담 신청</button>
+          <p class="form-notice">개인정보는 상담 목적으로만 사용되며, <a href="/privacy">개인정보처리방침</a>을 준수합니다.</p>
+        </div>
+      </form>
+    </div>
+
+    <!-- 직접 연락 -->
+    <div class="inquiry__contacts">
+      <div class="contact-item">
+        <h4>전화 상담</h4>
+        <p><a href="tel:05012345678">050-1234-5678</a></p>
+        <span>평일 09:00 ~ 18:00</span>
       </div>
-      <p>조선 · 해양 · 에너지 산업의 Commissioning 전 과정을 하나의 책임체계로 수행하는 Turnkey 전문기업.</p>
-    </div>
-    <div class="foot__map">
-      <div class="foot__col"><h4>회사소개</h4><a href="about.html#ceo">CEO 인사말</a><a href="about.html#overview">회사개요</a><a href="about.html#org">조직도</a></div>
-      <div class="foot__col"><h4>사업분야</h4><a href="business.html#commissioning">시운전</a><a href="business.html#support">기술지원</a><a href="business.html#maintenance">유지보수</a></div>
-      <div class="foot__col"><h4>프로젝트 실적</h4><a href="projects.html#domestic">국내 프로젝트</a><a href="projects.html#overseas">해외 프로젝트</a><a href="projects.html#clients">주요 고객사</a></div>
-      <div class="foot__col"><h4>인재채용</h4><a href="recruit.html">채용안내</a><a href="recruit.html#jobs">채용공고</a></div>
-      <div class="foot__col"><h4>홍보센터</h4><a href="news.html">게시판</a><a href="news.html#gallery">갤러리</a><a href="news.html#ci">CI</a></div>
-      <div class="foot__col"><h4>고객문의</h4><a href="contact.html#inquiry">문의하기</a><a href="contact.html#map">오시는 길</a></div>
+      <div class="contact-item">
+        <h4>카카오톡 문의</h4>
+        <p><a href="https://pf.kakao.com/">채팅하기</a></p>
+        <span>빠른 응답</span>
+      </div>
+      <div class="contact-item">
+        <h4>이메일 문의</h4>
+        <p><a href="mailto:info@kaiwan.co.kr">info@kaiwan.co.kr</a></p>
+        <span>24시간 수신</span>
+      </div>
     </div>
   </div>
-  <div class="wrap foot__info">
-    <span><b>K1</b> <?= esc($site['hq_addr']) ?> · <?= esc($site['ulsan_addr']) ?></span>
-    <span><b>K1 OCEAN</b> <?= esc($site['yeongam_addr']) ?></span>
-    <span><b>TEL</b> <?= esc($site['tel']) ?> · <b>FAX</b> <?= esc($site['fax']) ?></span>
-    <span><b>E-mail</b> <?= esc($site['email']) ?></span>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <h3 class="footer__logo">K1</h3>
+        <p>명함, 리플렛, 로고, 스티커 제작<br>당신의 브랜드를 세상에 알리는 디자인 회사</p>
+      </div>
+      <nav class="footer__nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__info">
+      <div class="footer__contact">
+        <p><strong>TEL</strong> 050-1234-5678</p>
+        <p><strong>Email</strong> info@kaiwan.co.kr</p>
+        <p><strong>Address</strong> 서울시 강남구 도산대로 1길</p>
+      </div>
+      <div class="footer__links">
+        <a href="/privacy">개인정보처리방침</a>
+        <a href="/terms">이용약관</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2026 (주)케이원. All rights reserved.</p>
+    </div>
   </div>
-  <div class="wrap foot__bot"><a class="foot__pp" href="privacy.html">개인정보 처리방침</a><span>© 2026 (주)케이원 (K1 Co., Ltd.) · K1 OCEAN — All rights reserved.</span></div>
 </footer>
 
 <script src="js/v2.js?v=20260902"></script>
